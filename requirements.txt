@@ -1,0 +1,10 @@
+fastapi
+numpy
+pandas
+pyarrow
+pydantic
+pydantic_core
+python-dateutil
+uvicorn
+surprise
+fastparquet
