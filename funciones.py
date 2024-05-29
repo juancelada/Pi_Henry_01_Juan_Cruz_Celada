@@ -176,5 +176,3 @@ def user_recomendations(user_id: str):
     recomendations_dict = {f"game {i+1}": games_recomend[i] for i in range(5)}
     
     return recomendations_dict
-
-id
