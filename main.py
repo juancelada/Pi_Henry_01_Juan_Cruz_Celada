@@ -12,10 +12,6 @@ app = FastAPI()
 
 #END POINTS
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
 @app.get("/developer/{dev}")
 async def get_developer(dev: str):
     try:
