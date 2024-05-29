@@ -31,7 +31,7 @@ def developer(dev: str):
     developer_data = games[games["developer"] == dev]
     
     # Cuenta la cantidad de juegos por año
-    cantidad_item = developer_data.groupby("release_year")["id"].count()
+    cantidad_item = developer_data.groupby("release_year")["item_id"].count()
     
     # Filtra los juegos gratuitos
     gratis = developer_data[developer_data["price"] == 0]
@@ -59,7 +59,7 @@ def developer(dev: str):
 
 # Función para obtener una breve descripción sobre la cuenta de un usuario
 def userdata(user_id: str):
-    merged_reviews_games = reviews.merge(games[['id', 'price']], left_on="item_id", right_on="id")
+    merged_reviews_games = reviews.merge(games[['item_id', 'price']], left_on="item_id", right_on="item_id")
     merged_reviews_games.drop(columns=['helpful', 'año', "sentiment_analysis"], inplace=True)
     
     if user_id not in merged_reviews_games['user_id'].unique():
@@ -88,7 +88,7 @@ def userdata(user_id: str):
 
 # Función para obtener información del usuario con más horas jugadas en un género específico
 def UserForGenre(genre: str):
-    merged_items_games = pd.merge(games, items, left_on="id", right_on="item_id")
+    merged_items_games = pd.merge(games, items, left_on="item_id", right_on="item_id")
     
     if genre not in merged_items_games.columns:
         return {'error': f"El género {genre} no existe en la base de datos."}
@@ -113,7 +113,7 @@ def UserForGenre(genre: str):
 
 # Función para obtener los mejores desarrolladores de un año específico
 def best_developer_year(year: int):
-    merged_df = reviews.merge(games, left_on="item_id", right_on="id")
+    merged_df = reviews.merge(games, left_on="item_id", right_on="item_id")
     
     if year not in merged_df['año'].unique():
         return {'error': 'El año especificado no existe.'}
@@ -128,7 +128,7 @@ def best_developer_year(year: int):
 
 # Función para analizar las reviews de un desarrollador
 def developer_reviews_analysis(developer: str):
-    merged = reviews.merge(games, left_on="item_id", right_on="id")
+    merged = reviews.merge(games, left_on="item_id", right_on="item_id")
     
     if developer not in games['developer'].unique():
         return {'error': 'El Desarrollador especificado no existe.'}
@@ -177,3 +177,4 @@ def user_recomendations(user_id: str):
     
     return recomendations_dict
 
+id
