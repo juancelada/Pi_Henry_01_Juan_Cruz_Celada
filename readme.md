@@ -50,8 +50,8 @@ Después de limpiar los datos, investigamos las relaciones entre variables, iden
 La API facilita el uso de datos por parte de los departamentos de análisis y machine learning. Entrenamos un modelo de recomendación con "surprise" para predecir juegos que podrían interesar a los usuarios. El modelo, exportado como un archivo .pkl, puede ser utilizado en el script principal para generar recomendaciones personalizadas.
 
 
-Nombre del Autor: Celada Juan Cruz
-Email: Juan.celada123@gmail.com 
-GitHub: https://github.com/juancelada
-LinkedIn: https://www.linkedin.com/in/juan-cruz-celada/
+Nombre del Autor: Celada Juan Cruz<br>
+Email: Juan.celada123@gmail.com<br>
+[GitHub](https://github.com/juancelada/Pi_Henry_01_Juan_Cruz_Celada)<br>
+[LinkedIn](https://www.linkedin.com/in/juan-cruz-celada/)
 
